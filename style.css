@@ -5,7 +5,7 @@
 }
 
 body{
-    background: url(img/back-2.png);
+    background: url(assets/img/back-2.png);
     background-size: cover;
     width:100vw;
     background-repeat: no-repeat;
@@ -57,7 +57,7 @@ body{
     display: none;
 }
 #login{
-    background: url(img/game-of-thrones-photo-background-hd.jpg);
+    background: url(assets/img/game-of-thrones-photo-background-hd.jpg);
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -125,7 +125,7 @@ body{
 /*Game over*/
 #gameover {
     position: fixed;
-    background: url('img/nightking.jpg');
+    background: url('assets/img/nightking.jpg');
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -171,7 +171,7 @@ body{
 
 #youWon {
     position: fixed;
-    background: url(img/tyrionQuote.jpg);
+    background: url(assets/img/tyrionQuote.jpg);
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -271,7 +271,7 @@ body{
 }
 .banner {
     height: 5em;
-    background: url('img/topgame_img.jpg');
+    background: url('assets/img/topgame_img.jpg');
     background-size: cover;
     background-position: 0% 46%;
 }
