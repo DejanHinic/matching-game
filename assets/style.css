@@ -1,0 +1,545 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Cinzel', sans-serif;
+}
+
+body{
+    background: url(img/back-2.png);
+    background-size: cover;
+    width:100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+} 
+.icon{
+    width: 25px;
+    float: right;
+    padding-top: 15px;
+    padding-right: 15px;
+    position: relative;
+    z-index: 2;
+}
+#iconNo{
+    display: none;
+}
+
+.icon:hover{
+    filter: opacity(50%);
+    cursor: pointer;
+}
+.button {
+    text-align: center;
+    color: black;
+    background-color: #c68217;
+    border-radius: 25px;
+    font-family: 'Cinzen', sans-serif;
+    font-weight: bold;
+    font-size: 200%;
+    position: absolute;
+    bottom: 350px;
+    width: 200px;
+    left: 50%;
+    margin-left: -87px;
+    padding: 20px;
+}
+.button:hover {
+    cursor: pointer;
+    color: darkslategray;
+}
+.start:hover {
+    border: 1px solid #f2e7c7;
+    background-color: #f2e7c7;
+}
+/*Start game*/
+.hide{
+    display: none;
+}
+#login{
+    background: url(img/game-of-thrones-photo-background-hd.jpg);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    
+    justify-content: flex-end;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* top: 10%; */
+    padding-top: 30%;
+    z-index: 1;
+}
+
+
+
+
+.pickname{
+    color: #c68217;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.signin {
+    border: solid 1px #c68217;
+    border-radius: 25px;
+    background-color: #09041a;
+    padding: 20px 0;
+   width: fit-content;
+    margin: auto;
+}
+
+.signin > input {
+    padding-top: 2em;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid#c68217; 
+    text-align: center;
+}
+
+.start{
+    color: #c68217;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #fafafa;
+    border: 1px solid #fafafa;
+    border-radius: 25px;
+    outline: 0;
+    margin-top: 20px;
+    padding: 15px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.start:hover {
+    border: 1px solid #f2e7c7;
+    background-color: #f2e7c7;
+}
+
+/*Game over*/
+#gameover {
+    position: fixed;
+    background: url('img/nightking.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sorry{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 60px;
+    color: #f2e7c7;
+    background-color: #c68217;
+    
+    
+    border-radius: 5px;
+}
+
+#tryAgain {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c68217;
+    border: solid 1px #c68217;
+    border-radius: 5px;
+    margin-top: 30px;
+    color: #f2e7c7;
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+}
+
+#tryAgain:hover{
+    background-color: #fdb160;
+    cursor: pointer;
+}
+
+
+/*You won*/
+
+#youWon {
+    position: fixed;
+    background: url(img/tyrionQuote.jpg);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#youWon h1 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 60px;
+    color: #f2e7c7;
+    
+}
+
+#playAgain {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c68217;
+    border: solid 1px #c68217;
+    border-radius: 5px; 
+    margin-top: 30px;
+    color: #f2e7c7;
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+}
+
+#playAgain:hover{
+    background-color: #ffbf43;
+    cursor: pointer;
+}
+
+/*Modal*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0; top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(88, 88, 88, 0.7);
+}
+
+.modal-content{
+    background-color: #ffe6be;
+    margin: 50% auto;
+    padding: 50px;
+    width: 70%;
+}
+.modal-content > p{
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    color: #c68217;
+    margin-top: 50px;
+}
+.closeBtn{
+    font-size: 3em;
+    color: #ebeee3;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+.closeBtn:hover, .closeBtn:focus {
+    color: #98a24c;
+    text-decoration: none;
+    cursor: pointer;
+}
+#username {
+    font-size: 1em;
+    padding-top: 0.5em;
+    color: #fafafa;
+}
+.player {
+    text-align: center;
+}
+#player {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #c68217;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+.logo {
+    width: 10em;
+    margin: auto;
+    position: absolute;
+    top: 10px; left: 0; right: 0;
+}
+.banner {
+    height: 5em;
+    background: url('img/topgame_img.jpg');
+    background-size: cover;
+    background-position: 0% 46%;
+}
+.banner2 {
+    height: 3em;
+    background-image: linear-gradient(to right, #21232f,#272936);
+    margin-bottom: 0.3em;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+#turns { 
+    display: inline-block;
+    margin-top: 13px;
+    color: darkolivegreen;
+    color: white;
+    font-weight: 500;
+}
+#time-remaining {
+    display: inline-block;
+    margin-right: 180px;
+    color: darkolivegreen;
+    color: white;
+    font-weight: 500;
+    
+}
+
+
+/*CARDS */
+
+
+#game {
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  justify-content: center;
+  padding-bottom: 45px;
+  margin-top: 4%;
+} 
+    
+    #youwon{
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+   
+    
+    .card {
+          width: 200px;
+          height: 200px;
+          margin: 5px;
+          position: relative;
+          transform: scale(1);
+          transform-style: preserve-3d;
+          transition: transform .5s;
+          box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+.card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+.front,
+.back {
+   width: 100%;
+  height: 100%;
+  
+  position: absolute;
+  border-radius: 5px;
+  
+  backface-visibility: hidden
+} 
+.front {
+    transform: rotateY(180deg);
+}
+
+
+@media (min-width:319px){
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+    #game{
+        margin-top: 2em;
+        justify-content: center;
+    }
+     
+   
+    .banner {
+        height: 2em;
+    }
+}
+
+
+
+
+
+
+@media (min-width:359px){
+    .card {
+        width: 90px;
+        height: 90px;
+    }
+    #game{
+        margin-top: 2em;
+        justify-content: center;
+    }
+     
+   
+    .banner {
+        height: 5em;
+    }
+   
+}
+
+
+@media (min-width:410px){
+     .card {
+        width: 100px;
+        height: 100px;
+    }
+    #game{
+        margin-top: 2em;
+        
+        justify-content: center;
+       
+    }
+    
+    .banner {
+        height: 5em;
+    }
+}
+
+@media (min-width:767px){
+    .card {
+        width: 150px;
+        height: 150px; 
+    }
+    #game{
+        margin-top: 2em;
+        width: 80%;
+        justify-content: center;
+    }
+    
+    #player {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+    .logo {
+        width: 15em;
+        margin-top: 10px;
+    }
+    .banner {
+        height: 8em;
+    }
+    .banner2 {
+        height: 3.5em;
+    }
+    #turns {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    #time-remaining {
+        margin-right: 270px;
+        font-size: 20px;
+    }
+    
+    
+    .login-logo {
+        margin-top: 200px;
+        margin-bottom: 30px;
+        width: 40%;
+    }
+    #play {
+        font-size: 30px;
+        width: 120px;
+        height: 60px;
+    }
+    .sorry{
+        font-size: 40px;
+    }
+    #tryAgain {
+        font-size: 30px;
+        width: 230px;
+        height: 60px;
+    }
+    .icon {
+        width: 37px;
+    }
+    #playAgain {
+        font-size: 30px;
+        width: 200px;
+        height: 50px;
+    }
+}
+
+
+
+@media (min-width:1023px) {
+    #player {
+        margin-top: 30px;
+        margin-bottom: 0;
+        font-size: 25px;
+    }
+    #game {
+        width: 80%;
+        justify-content: center;
+        margin-top: 50px;
+    }
+   
+    .card {
+        width: 200px;
+        height: 200px;
+        margin: 10px;        
+    }
+    .login-logo {
+        width: 20%;
+    }
+     
+    .logo {
+        width: 13em;
+    }
+    .banner {
+        height: 10em;
+    }
+    .banner2 {
+        height: 3em;
+    }
+    
+    #turns { 
+        margin-top: 10px;
+        display: inline-block;
+        font-size: 20px;
+    }
+    #time-remaining {
+        display: inline-block;
+        margin-right: 520px;
+        font-size: 20px;
+    }
+    
+    .sorry{
+        font-size: 40px;
+    }
+    #tryAgain {
+        font-size: 25px;
+        width: 140px;
+        height: 50px;
+    }
+    #playAgain {
+        font-size: 35px;
+        width: 220px;
+        height: 70px;
+    }
+    .modal-content {
+        margin: 20em auto;
+        width: 30%;
+        height: 20%;
+    }
+    .modal-content > p {
+        font-weight: 300;
+        font-size: 2em;
+        letter-spacing: 3px;
+        margin-top: 2.5em;
+    }
+}
+
