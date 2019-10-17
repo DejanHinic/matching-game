@@ -14,12 +14,13 @@ body{
     height: 100vh;
 } 
 .icon{
-    width: 25px;
+    
     float: right;
     padding-top: 15px;
     padding-right: 15px;
     position: relative;
     z-index: 2;
+    width: 50px;
 }
 #iconNo{
     display: none;
@@ -68,7 +69,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     /* top: 10%; */
-    padding-top: 30%;
+    
     z-index: 1;
 }
 
@@ -87,8 +88,14 @@ body{
     border-radius: 25px;
     background-color: #09041a;
     padding: 20px 0;
-   width: fit-content;
+    width: fit-content;
     margin: auto;
+    margin-top: 25%;
+}
+
+
+#username {
+    background-color: transparent;
 }
 
 .signin > input {
@@ -98,6 +105,7 @@ body{
     outline: 0;
     border-bottom: 1px solid#c68217; 
     text-align: center;
+    
 }
 
 .start{
@@ -389,6 +397,10 @@ body{
     .banner {
         height: 5em;
     }
+    .signin {
+    
+    margin-top: 25%;
+}
    
 }
 
