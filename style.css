@@ -385,8 +385,8 @@ body{
 
 @media (min-width:359px){
     .card {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
     }
     #game{
         margin-top: 2em;

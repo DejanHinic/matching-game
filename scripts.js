@@ -39,7 +39,13 @@ bgMusic.volume = 0.05;
 bgMusic.loop = true;
 bgMusic.autoplay = true;
 ingameMusic.loop = true;
-
+    
+    
+   
+    
+    
+    
+    
     document.getElementById("iconYes").addEventListener("click", function off(){
         document.getElementById("iconYes").style.display = "none";
         document.getElementById("iconNo").style.display = "inline";
@@ -52,6 +58,7 @@ ingameMusic.loop = true;
         document.getElementById("iconYes").style.display = "inline";
         bgMusic.volume = 0.1;
         ingameMusic.volume = 0.1;
+        bgMusic.autoplay = true;
       });
       
       
@@ -232,5 +239,5 @@ document.getElementById("tryAgain").addEventListener("click", function(){
 
 //winning
 document.getElementById("playAgain").addEventListener("click", function(){
-    document.location.reload();
+   document.location.reload();
 });
