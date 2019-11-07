@@ -35,17 +35,13 @@ soundForNoMatchingCard.volume = 0.3;
 soundForCardFlip.volume = 0.3;
 
 
-bgMusic.volume = 0.05;
-bgMusic.loop = true;
-bgMusic.autoplay = true;
 ingameMusic.loop = true;
+
+
     
-    
-   
-    
-    
-    
-    
+
+
+
     document.getElementById("iconYes").addEventListener("click", function off(){
         document.getElementById("iconYes").style.display = "none";
         document.getElementById("iconNo").style.display = "inline";
@@ -58,12 +54,15 @@ ingameMusic.loop = true;
         document.getElementById("iconYes").style.display = "inline";
         bgMusic.volume = 0.1;
         ingameMusic.volume = 0.1;
-        bgMusic.autoplay = true;
+        
       });
       
-      
-      
-      
+ document.getElementById("login").addEventListener("mouseover", function(){
+        bgMusic.play();
+        bgMusic.loop = true;
+        bgMusic.volume = 0.1;
+      });      
+
       
 function openModal(){
     closeBtn.addEventListener('click',closeModal);
@@ -87,6 +86,7 @@ function closeOutside(e){
 startGame.addEventListener('click', hide);
 login.addEventListener('submit', e => {
     ingameMusic.play();
+    
     bgMusic.pause();
     e.preventDefault();
     hide();    
@@ -239,5 +239,5 @@ document.getElementById("tryAgain").addEventListener("click", function(){
 
 //winning
 document.getElementById("playAgain").addEventListener("click", function(){
-   document.location.reload();
+    document.location.reload();
 });
