@@ -36,7 +36,8 @@ soundForCardFlip.volume = 0.3;
 
 
 ingameMusic.loop = true;
-
+bgMusic.play();
+bgMusic.loop = true;
 
     
 
@@ -56,14 +57,7 @@ ingameMusic.loop = true;
         ingameMusic.volume = 0.1;
         
       });
-      
- document.getElementById("login").addEventListener("mouseover", function(){
-        bgMusic.play();
-        bgMusic.loop = true;
-        bgMusic.volume = 0.1;
-      });      
-
-      
+    
 function openModal(){
     closeBtn.addEventListener('click',closeModal);
     window.addEventListener('click', closeOutside);
@@ -137,11 +131,11 @@ function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
-    levels();
+    ending();
 }
 
 
-function levels(){
+function ending(){
     if(score === 10 || score === 28) {
         document.getElementById("game").style.display = "block";
         clearInterval(timer);
@@ -149,13 +143,13 @@ function levels(){
             document.getElementById("youWon").style.display = "none";    
         });
     } 
-    if (score === 10){
+   if (score === 10){
         turns = 0;
         document.getElementById("game").style.display = "none";
         document.getElementById("youWon").style.display = "block";
         
         
-        ingameMusic.volume = 0;
+       ingameMusic.volume = 0;
         winningSound.play();
     }
 }

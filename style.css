@@ -178,7 +178,7 @@ body{
     display: none;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
 }
 #youWon h1 {
     font-size: 25px;
