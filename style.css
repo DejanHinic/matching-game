@@ -1,8 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Cinzel', sans-serif;
-}
 
 body{
     background: url(assets/img/back-2.png);
@@ -12,6 +7,9 @@ body{
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Cinzel', sans-serif;
 } 
 .icon{
     

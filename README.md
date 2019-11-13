@@ -14,7 +14,7 @@ You need to enter your name to play, and you can try again as many times as you 
 ## Features and info
 
 ##### Login
-Intro sound is the Theme of Game of thrones.
+Intro sound is the Theme of Game of thrones is activating when you start yo type your username.
 There is and custom made sound icon on top right corner, with a function to mute or play the intro music.
 Sign in form with on click button to start the game and there is cool high quality background picture to give
 an very apealing to user element.
@@ -42,7 +42,7 @@ There is option to click on to try again and that return you to log in page.
 - html5 https://www.w3schools.com/html/ 
 - css https://www.w3schools.com/css/css_intro.asp for styling
 - bootstrap 4 https://getbootstrap.com/ to build the grid and make it responsive for all devices
-- Balsamiq https://balsamiq.com/?gclid=CjwKCAjwndvlBRANEiwABrR32Mzzb1wWuG0slcCQDwB1B2W9OBv8pacL7BzOZ9sGnPggguab1vbt4BoCTewQAvD_BwE 
+- Adobe XD 
 - Javascript 
 - Google fonts
 - jQuery
