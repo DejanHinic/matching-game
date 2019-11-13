@@ -36,11 +36,14 @@ soundForCardFlip.volume = 0.3;
 
 
 ingameMusic.loop = true;
-bgMusic.play();
+bgMusic.play;
 bgMusic.loop = true;
 
-    
-
+        document.getElementById("username").addEventListener("click", function(){
+        bgMusic.play();
+        bgMusic.volume = 0.1;
+        
+      });
 
 
     document.getElementById("iconYes").addEventListener("click", function off(){
@@ -80,7 +83,7 @@ function closeOutside(e){
 startGame.addEventListener('click', hide);
 login.addEventListener('submit', e => {
     ingameMusic.play();
-    
+    ingameMusic.volume = 0.1;
     bgMusic.pause();
     e.preventDefault();
     hide();    
@@ -148,9 +151,9 @@ function ending(){
         document.getElementById("game").style.display = "none";
         document.getElementById("youWon").style.display = "block";
         
-        
+       winningSound.volume = 0.1;
        ingameMusic.volume = 0;
-        winningSound.play();
+       winningSound.play();
     }
 }
 
@@ -165,6 +168,7 @@ function turning() {
         document.getElementById("gameover").style.display = "block";
         ingameMusic.volume = 0;
         losingSound.play();
+        losingSound.volume = 0.1;
     }
 
     document.getElementById('turns').innerText = 'Turns: ' + turns;
@@ -212,7 +216,7 @@ $("#modalBtn").on("click", function(){
         document.getElementById("gameover").style.display = "block";
         ingameMusic.volume = 0;
         losingSound.play();
-        
+        losingSound.volume = 0.1;
     });
 });
 
